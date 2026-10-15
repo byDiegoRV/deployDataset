@@ -35,6 +35,7 @@ jobs:
       run: python model/train.py
 
     - name: docker build
+      working-directory: ./deploy-ml
       run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}} .
       
     - name: show images
