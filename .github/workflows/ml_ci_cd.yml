@@ -24,9 +24,12 @@ jobs:
     - name: list
       run: python --version
 
-    - name: pip install
+    -- name: pip install
       run: pip install -r requirements.txt
       
+    - name: List files to check structure
+      run: ls -R
+      
     - name: train model
-      run: python deploy-ml/train.py
+      run: python train.py
   
