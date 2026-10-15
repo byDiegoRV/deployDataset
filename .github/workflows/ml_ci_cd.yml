@@ -31,5 +31,6 @@ jobs:
       run: ls -R
       
     - name: train model
-      run: python deploy-ml/model/train.py
+      working-directory: ./deploy-ml
+      run: python model/train.py
   
